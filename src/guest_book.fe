@@ -1,0 +1,2 @@
+contract GuestBook:
+    messages: Map<address, String<100>>
