@@ -4,7 +4,7 @@ pragma solidity 0.8.10;
 import "ds-test/test.sol";
 import "forge-std/Vm.sol";
 
-import "../Greeter.sol";
+import "../src/Greeter.sol";
 
 contract GreeterTest is DSTest {
     Vm public constant vm = Vm(HEVM_ADDRESS);
@@ -18,7 +18,7 @@ contract GreeterTest is DSTest {
     function test_default_greeting() public {
        assertEq(greeter.greet(), "Hello, world!");
     }
-    
+
     function test_custom_greeting() public {
        assertEq(greeter.greet("foundry"), "Hello, foundry!");
     }
@@ -26,7 +26,7 @@ contract GreeterTest is DSTest {
     function test_get_greeting() public {
         assertEq(greeter.greeting(), "Hello");
     }
-    
+
     function test_set_greeting() public {
         greeter.setGreeting("Ahoy-hoy");
         assertEq(greeter.greet(), "Ahoy-hoy, world!");

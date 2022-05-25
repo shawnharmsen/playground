@@ -4,4 +4,4 @@ out/
 out.json
 cache/
 .idea
-src/output
+output/
