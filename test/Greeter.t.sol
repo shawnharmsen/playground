@@ -16,11 +16,11 @@ contract GreeterTest is DSTest {
     }
 
     function test_default_greeting() public {
-       assertEq(greeter.greet(), "Hello, world!");
+        assertEq(greeter.greet(), "Hello, world!");
     }
 
     function test_custom_greeting() public {
-       assertEq(greeter.greet("foundry"), "Hello, foundry!");
+        assertEq(greeter.greet("foundry"), "Hello, foundry!");
     }
 
     function test_get_greeting() public {
