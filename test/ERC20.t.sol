@@ -109,7 +109,6 @@ contract ERC20Test is DSTestPlus {
     }
 
     function testFailTransferInsufficientBalance() public {
-        emit log_string("testFailTransferInsufficientBalance failed");
         token.mint(address(this), 0.9e18);
         token.transfer(address(0xBEEF), 1e18);
     }
