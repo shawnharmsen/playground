@@ -12,4 +12,10 @@ contract SimpleTest is DSTest {
         emit log_string("test");
         return (a, b, c);
     }
+
+    function testValues() public {
+        assertEq(a, 1234);
+        assertEq(b, 'a');
+        assertEq(c, "asdf");
+    }
 }
